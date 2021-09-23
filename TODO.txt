@@ -1,0 +1,48 @@
+tfg disse pra botar na lib:
+* Aho-Corasick
+* Suffix Array
+* Manacher (não necessário)
+* Z-algorithm (não necessário, mas muito útil)
+* Primitivas de Geometria (Ponto com produto escalar e vetorial)
+    - Aprender como usar isso pra achar coisa de interseção de reta (prioridade baixa)
+    - Convex Hull, Convex Hull Trick (prioridade alta)
+* Fluxo máximo
+* Min Cost Max Flow (prioridade baixa, não é dificil se vc entende fluxo máximo)
+* Segtree persistente
+* Color update
+* Fórmula de Faulhaber até soma de cubos
+* Mo rápido daquele blog do cf (prioridade baixa)
+* BIT 2D (a que vc já sabe os updates antes, é bom só que não é necessário)
+* Treap
+* BCC
+* SCC
+* Aprender o que é convolução
+* FFT e NTT
+* Convolução de AND, OR, XOR (FWHT)
+* Código pra iterar por submasks
+* Aprender o básico de função geradora
+* Aprender o básico de álgebra linear para cp (Eliminação Gaussiana)
+* Aprender sobre nimber (Sprague-Grundy theorem)
+* Argumento da troca (Aprender)
+
+Coisas a mais que eu quero:
+
+* Segtree iterativa com lazy propagation (reference: https://codeforces.com/blog/entry/18051)
+* Sparse Table
+* Centroid Decomposition
+* Melhorar o ModInt
+* Min Queue
+* Função de mobius (?)
+* Minkowski sum (aprender)
+* Números de Stirling do primeiro tipo (ler)
+* Números de Stirling do segundo tipo (adicionar no BasicComb.cpp)
+* Números de Bell (ler)
+
+Need Revision:
+
+* Binary Lifting (LCA) 
+* HLD
+* Matrix
+* Basic Combinatorics
+* Classe de número pra aritimética modular
+* Suffix Array
