@@ -27,7 +27,7 @@ namespace BinaryLifting {
 	void up(int &x, int d) {
 		for (int i = 0; i < LOG; i++) {
 			if (d & (1 << i))
-				x = anc[d][x];
+				x = anc[i][x];
 		}
 	}
 
