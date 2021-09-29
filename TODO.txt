@@ -42,7 +42,7 @@ Need Revision:
 
 * Binary Lifting (LCA) 
 * HLD
-* Matrix
+* Matrix (Compare the performances of vectors, std::arrays and normal arrays)
 * Basic Combinatorics
-* Classe de número pra aritimética modular
+* Improve ModInt.cpp
 * Suffix Array
