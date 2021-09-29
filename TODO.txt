@@ -17,7 +17,7 @@ tfg disse pra botar na lib:
 * BCC
 * SCC
 * Aprender o que é convolução
-* FFT e NTT
+* NTT
 * Convolução de AND, OR, XOR (FWHT)
 * Código pra iterar por submasks
 * Aprender o básico de função geradora
@@ -42,7 +42,8 @@ Need Revision:
 
 * Binary Lifting (LCA) 
 * HLD
-* Matrix (Compare the performances of vectors, std::arrays and normal arrays)
-* Basic Combinatorics
-* Improve ModInt.cpp
+* Matrix (Comparar a performance de std::vector, std::array e vetores)
+* Basic Combinatorics (Adicionar outras funções úteis)
+* Melhorar o ModInt.cpp
 * Suffix Array
+* FFT (Testar pra ver se ta rapido)
