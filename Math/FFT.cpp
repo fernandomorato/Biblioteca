@@ -1,4 +1,5 @@
 namespace FFT {
+	typedef long long ll;
 	using cd = complex<double>;
 	const double PI = acos(-1);
 
