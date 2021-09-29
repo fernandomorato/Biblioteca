@@ -10,7 +10,7 @@ struct Matrix {
 				v[i][j] = T(0);
 			}
 			if (i < m)
-				v[i][i] = T(1);
+				v[i][i] = T(d);
 		}
 	}
 
