@@ -13,14 +13,14 @@ void setup() {
 	}
 }
 
-// C(n) = n-th Catalan number - number of valid parenthesis sequences of size 2 * n
-Mint<> C(int n) {
-	return C(2 * n, n) - C(2 * n, n + 1);
-}
-
 // C(n, k) = n choose k, number of ways to choose a set of k elements from a set of n elements
 Mint<> C(int n, int k) {
 	if (n < k || k < 0)
 		return Mint<>(0);
 	return fat[n] * inv[k] * inv[n - k];
+}
+
+// C(n) = n-th Catalan number - number of valid parenthesis sequences of size 2 * n
+Mint<> C(int n) {
+	return C(2 * n, n) - C(2 * n, n + 1);
 }
