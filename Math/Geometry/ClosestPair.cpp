@@ -1,4 +1,4 @@
-pll closestPair(vector<PT> &p) {
+pii closestPair(vector<PT> &p) {
 	auto sqDist = [](PT pt) { return pt * pt; };
 	long long dist = sqDist(p[0] - p[1]);
 	pii ans(0, 1);
