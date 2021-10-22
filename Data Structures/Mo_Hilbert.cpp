@@ -1,3 +1,4 @@
+// Source: https://codeforces.com/blog/entry/61203?#comment-522213
 namespace MO {
 	constexpr int logn = 20;
 	constexpr int maxn = 1 << logn;
@@ -29,6 +30,8 @@ namespace MO {
 		// maybe add new stuff here
 		long long id;
 		int l, r, idx;
+
+		// Query(int _idx, int _l, int _r): idx(_idx), l(_l), r(_r) {}
 
 		bool operator < (const Query &o) const {
 			return id < o.id;
