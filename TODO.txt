@@ -1,8 +1,6 @@
 tfg disse pra botar na lib:
-* Aho-Corasick
 * Suffix Array
 * Manacher (não necessário)
-* Z-algorithm (não necessário, mas muito útil)
 * Primitivas de Geometria (Ponto com produto escalar e vetorial)
     - Aprender como usar isso pra achar coisa de interseção de reta (prioridade baixa)
     - Convex Hull Trick (prioridade alta)
@@ -11,7 +9,6 @@ tfg disse pra botar na lib:
 * Segtree persistente
 * Color update
 * Fórmula de Faulhaber até soma de cubos
-* Mo rápido daquele blog do cf (prioridade baixa)
 * BIT 2D (a que vc já sabe os updates antes, é bom só que não é necessário)
 * BCC
 * SCC
@@ -29,7 +26,6 @@ Coisas a mais que eu quero:
 * Segtree iterativa com lazy propagation (reference: https://codeforces.com/blog/entry/18051)
 * Sparse Table
 * Centroid Decomposition
-* Min Queue
 * Minkowski sum (aprender)
 * Números de Stirling do primeiro tipo (ler)
 * Números de Stirling do segundo tipo (adicionar no BasicComb.cpp)
@@ -38,11 +34,9 @@ Coisas a mais que eu quero:
 Need Revision:
 
 * Treap
-* Convex-Hull
 * Binary Lifting (LCA) 
 * HLD
 * Matrix (Comparar a performance de std::vector, std::array e vetores)
 * Basic Combinatorics (Adicionar outras funções úteis)
 * Melhorar o ModInt.cpp
-* Suffix Array
 * FFT (Testar pra ver se ta rapido)
