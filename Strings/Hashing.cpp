@@ -1,5 +1,5 @@
 struct Hash {
-    const int p[2] = {31, 37};
+    const int p[2] = {31, 37}; // remember to change bases if needed
     const int m[2] = {(int) 1e9 + 7, (int) 1e9 + 9};
 
     int n;
