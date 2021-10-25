@@ -33,36 +33,3 @@ private:
 	vector<int> pw;
 	vector<vector<T>> tab;
 };
-
-// template<class base_t, class func = function<base_t(const base_t&, const base_t&)>>
-// class sparse_table
-// {
-// private:
-// 	int n, LOG;
-// 	vector<vector<base_t>> t;
-// 	func f;
-
-// public:
-// 	sparse_table(){}
-// 	sparse_table(const vector<base_t>& v, const func& _f)
-// 	{
-// 		f = _f;
-// 		n = LEN(v);
-// 		LOG =  31 - __builtin_clz(n);
-
-// 		t.assign(n, vector<base_t>(LOG + 1));
-
-// 		for(int i = 0; i < n; i++)
-// 			t[i][0] = v[i];
-
-// 		for(int j = 1; j <= LOG; j++)
-// 			for(int i = 0; i + (1 << j) <= n; i++)
-// 				t[i][j] = f(t[i][j - 1], t[i + (1 << (j - 1))][j - 1]);
-// 	}
-
-// 	base_t query(int l, int r)
-// 	{
-// 		int k =  31 - __builtin_clz(r - l + 1);
-// 		return f(t[l][k], t[r - (1 << k) + 1][k]);
-// 	}
-// };
