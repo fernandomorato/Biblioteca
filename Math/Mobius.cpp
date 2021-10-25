@@ -19,7 +19,6 @@ void sieve(int n = MAXN - 1) {
 			if (1ll * p * i > n)
 				break;
 			isPrime[i * p] = false;
-			s[i * p] += s[i];
 			if (i % p == 0) {
 				phi[i * p] = 0;
 				break;
