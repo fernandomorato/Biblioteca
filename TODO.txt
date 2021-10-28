@@ -1,12 +1,7 @@
 tfg disse pra botar na lib:
-* Suffix Array
-* Manacher (não necessário)
 * Primitivas de Geometria (Ponto com produto escalar e vetorial)
     - Aprender como usar isso pra achar coisa de interseção de reta (prioridade baixa)
     - Convex Hull Trick (prioridade alta)
-* Fluxo máximo
-* Min Cost Max Flow (prioridade baixa, não é dificil se vc entende fluxo máximo)
-* Segtree persistente
 * Color update
 * Fórmula de Faulhaber até soma de cubos
 * BIT 2D (a que vc já sabe os updates antes, é bom só que não é necessário)
@@ -24,7 +19,6 @@ tfg disse pra botar na lib:
 Coisas a mais que eu quero:
 
 * Segtree iterativa com lazy propagation (reference: https://codeforces.com/blog/entry/18051)
-* Sparse Table
 * Centroid Decomposition
 * Minkowski sum (aprender)
 * Números de Stirling do primeiro tipo (ler)
@@ -38,5 +32,4 @@ Need Revision:
 * HLD
 * Matrix (Comparar a performance de std::vector, std::array e vetores)
 * Basic Combinatorics (Adicionar outras funções úteis)
-* Melhorar o ModInt.cpp
 * FFT (Testar pra ver se ta rapido)
