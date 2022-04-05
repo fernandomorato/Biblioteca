@@ -1,58 +1,58 @@
-namespace FFT {
-	typedef long long ll;
-	using cd = complex<double>;
-	const double PI = acos(-1);
+// copied from: https://github.com/brunomaletta/Biblioteca/blob/master/Codigo/Matematica/convolution.cpp
 
-	void fft(vector<cd> & a, bool invert) {
-		int n = a.size();
+// FFT
+//
+// chamar com vector<cplx> para FFT, ou vector<mint> para NTT
+//
+// O(n log(n))
+// 64e51b
 
-		for (int i = 1, j = 0; i < n; i++) {
-			int bit = n >> 1;
-			for (; j & bit; bit >>= 1)
-				j ^= bit;
-			j ^= bit;
+template<typename T> void fft(vector<T> &a, bool f, int N, vector<int> &rev){
+	for (int i = 0; i < N; i++)
+		if (i < rev[i])
+			swap(a[i], a[rev[i]]);
+	int l, r, m;
+	vector<T> roots(N);
+	for (int n = 2; n <= N; n *= 2){
+	    T::fill_rt(f, n, N, roots);
 
-			if (i < j)
-				swap(a[i], a[j]);
-		}
-
-		for (int len = 2; len <= n; len <<= 1) {
-			double ang = 2 * PI / len * (invert ? -1 : 1);
-			cd wlen(cos(ang), sin(ang));
-			for (int i = 0; i < n; i += len) {
-				cd w(1);
-				for (int j = 0; j < len / 2; j++) {
-					cd u = a[i+j], v = a[i+j+len/2] * w;
-					a[i+j] = u + v;
-					a[i+j+len/2] = u - v;
-					w *= wlen;
-				}
+		for (int pos = 0; pos < N; pos += n){
+			l = pos+0, r = pos+n/2, m = 0;
+			while (m < n/2){
+				auto t = roots[m]*a[r];
+				a[r] = a[l] - t;
+				a[l] = a[l] + t;
+				l++; r++; m++;
 			}
 		}
-
-		if (invert) {
-			for (cd & x : a)
-				x /= n;
-		}
 	}
-
-	vector<ll> multiply(vector<int> const& a, vector<int> const& b) {
-		vector<cd> fa(a.begin(), a.end()), fb(b.begin(), b.end());
-		int n = 1;
-		while (n < (int)(a.size() + b.size())) 
-			n <<= 1;
-		fa.resize(n);
-		fb.resize(n);
-
-		fft(fa, false);
-		fft(fb, false);
-		for (int i = 0; i < n; i++)
-			fa[i] *= fb[i];
-		fft(fa, true);
-
-		vector<ll> result(n);
-		for (int i = 0; i < n; i++)
-			result[i] = round(fa[i].real());
-		return result;
+	if (f) {
+		auto invN = T(1)/N;
+		for(int i = 0; i < N; i++) a[i] = a[i]*invN;
 	}
+}
+
+template<typename T> vector<T> convolution(vector<T> &a, vector<T> &b) {
+	vector<T> l(a.begin(), a.end());
+	vector<T> r(b.begin(), b.end());
+	int ln = l.size(), rn = r.size();
+	int N = ln+rn-1;
+	int n = 1, log_n = 0;
+	while (n <= N) { n <<= 1; log_n++; }
+	vector<int> rev(n);
+	for (int i = 0; i < n; ++i){
+		rev[i] = 0;
+		for (int j = 0; j < log_n; ++j)
+			if (i & (1<<j))
+				rev[i] |= 1 << (log_n-1-j);
+	}
+	assert(N <= n);
+	l.resize(n);
+	r.resize(n);
+	fft(l, false, n, rev);
+	fft(r, false, n, rev);
+	for (int i = 0; i < n; i++)
+		l[i] *= r[i];
+	fft(l, true, n, rev);
+	return l;
 }
