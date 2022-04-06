@@ -1,5 +1,7 @@
 // Division Trick
 //
+// 5bf9bf
+
 // by tfg
 // found at: https://github.com/tfg50/Competitive-Programming/blob/master/Biblioteca/Math/DivisionTrick.cpp
 // O(sqrt(n))

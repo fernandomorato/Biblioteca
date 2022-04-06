@@ -1,5 +1,6 @@
 // Segment Tree com Lazy
 //
+// 51aeac
 struct Lazy {
 	// atributes
 

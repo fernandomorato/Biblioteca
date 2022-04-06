@@ -1,7 +1,8 @@
 // Suffix Array
 //
-// by tfg50
-// found at: https://github.com/tfg50/Competitive-Programming/blob/master/Biblioteca/Strings/SuffixArray.cpp
+// 675a66
+
+// by tfg
 class SuffixArray {
 public:
 	template<class T>

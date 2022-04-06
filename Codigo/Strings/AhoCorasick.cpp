@@ -1,5 +1,7 @@
 // Aho Corasick
 //
+// efdf19
+
 // based on: https://github.com/tfg50/Competitive-Programming/blob/master/Biblioteca/Strings/Aho.cpp
 template <const int ALPHA = 26, class T = string, const int OFFSET = 'a'>
 struct Aho {

@@ -1,5 +1,7 @@
 // Algoritmo Z
 //
+// d8a24c
+
 // Classic problems using Zfunction:
 // - String Matching Problem
 // - Number of Different Substrings in O(n^2)

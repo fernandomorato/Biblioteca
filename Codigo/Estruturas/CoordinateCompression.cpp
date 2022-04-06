@@ -2,6 +2,8 @@
 //
 // Classe para comprimir coordenadas
 
+// d8283d
+
 template <typename T>
 class CoordinateCompression {
 public:

@@ -1,6 +1,7 @@
 // Sparse Table
 //
 // Based on Juvitus and tfg implementations
+// 21b1d0
 template <class T, class F = function<T(const T&, const T&)>>
 class SparseTable {
 public:

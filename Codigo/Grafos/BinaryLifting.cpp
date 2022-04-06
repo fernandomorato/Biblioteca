@@ -1,5 +1,6 @@
 // Binary Lifting
 //
+// 1e18d0
 namespace BinaryLifting {
 	const int MAXN = 2e5 + 5;
 	const int LOG = 20;

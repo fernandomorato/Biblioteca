@@ -1,6 +1,6 @@
 // Otimizacao para Mo - Hilbert
 //
-// Source: https://codeforces.com/blog/entry/61203?#comment-522213
+// a1f430
 namespace MO {
 	constexpr int logn = 20;
 	constexpr int maxn = 1 << logn;

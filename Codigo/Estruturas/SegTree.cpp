@@ -1,5 +1,6 @@
 // Segment Tree
 //
+// 01129d
 struct Node {
 	// atributes
 

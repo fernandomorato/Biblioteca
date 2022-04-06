@@ -1,5 +1,6 @@
 // Ploblema dos pares mais proximos
 //
+// a673cd
 pii closestPair(vector<PT> &p) {
 	auto sqDist = [](PT pt) { return pt * pt; };
 	long long dist = sqDist(p[0] - p[1]);
