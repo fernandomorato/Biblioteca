@@ -25,11 +25,10 @@ Coisas a mais que eu quero:
 * Números de Stirling do segundo tipo (adicionar no BasicComb.cpp)
 * Números de Bell (ler)
 
-Need Revision:
+Precisa Revisar:
 
 * Treap
-* Binary Lifting (LCA) 
-* HLD
+* Binary Lifting (Precisa mesmo?) 
+* HLD (Refazer)
 * Matrix (Comparar a performance de std::vector, std::array e vetores)
 * Basic Combinatorics (Adicionar outras funções úteis)
-* FFT (Testar pra ver se ta rapido)
