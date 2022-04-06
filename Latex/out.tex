@@ -62,6 +62,8 @@ literate={~} {$\sim$}{1} % ~ bonitinho
 \begin{lstlisting}
 // Classe para comprimir coordenadas
 
+// d8283d
+
 template <typename T>
 class CoordinateCompression {
 public:
@@ -83,7 +85,7 @@ private:
 
 \subsection{Fenwick Tree}
 \begin{lstlisting}
-
+// 29985a
 template <typename T>
 class FenwickTree {
 public:
@@ -122,7 +124,7 @@ private:
 
 \subsection{Otimizacao para Mo - Hilbert}
 \begin{lstlisting}
-// Source: https://codeforces.com/blog/entry/61203?#comment-522213
+// a1f430
 namespace MO {
 	constexpr int logn = 20;
 	constexpr int maxn = 1 << logn;
@@ -168,6 +170,7 @@ using namespace MO;
 
 \subsection{Policy Based Data Structure}
 \begin{lstlisting}
+// d501f8
 #include <ext/pb_ds/assoc_container.hpp>
 #include <ext/pb_ds/tree_policy.hpp>
 
@@ -183,6 +186,7 @@ using ordered_set = __gnu_pbds::tree<T, M, less<T>, __gnu_pbds::rb_tree_tag, __g
 
 \subsection{Segment Tree}
 \begin{lstlisting}
+// 01129d
 struct Node {
 	// atributes
 
@@ -238,6 +242,7 @@ private:
 
 \subsection{Segment Tree com Lazy}
 \begin{lstlisting}
+// 51aeac
 struct Lazy {
 	// atributes
 
@@ -351,7 +356,7 @@ private:
 
 \subsection{Segment Tree Persistente}
 \begin{lstlisting}
-
+// f9bdcf
 struct Node{
 	int v = 0;
 	Node *l = this, *r = this;
@@ -383,6 +388,7 @@ int query(Node *node, int tl, int tr, int l, int r){
 \subsection{Sparse Table}
 \begin{lstlisting}
 // Based on Juvitus and tfg implementations
+// 21b1d0
 template <class T, class F = function<T(const T&, const T&)>>
 class SparseTable {
 public:
@@ -421,6 +427,7 @@ private:
 
 \subsection{Treap Implicita}
 \begin{lstlisting}
+// 2f6de4
 namespace treap {
 	// mt19937 rng((unsigned int) chrono::steady_clock::now().time_since_epoch().count());
 
@@ -535,7 +542,7 @@ namespace treap {
 
 \subsection{Union Find}
 \begin{lstlisting}
-
+// 739726
 class DSU {
 public:
 	void init(int n) {
@@ -588,6 +595,7 @@ private:
 
 \subsection{Convex Hull}
 \begin{lstlisting}
+// 4c51e2
 vector<PT> convexHull(vector<PT> &p, bool sorted = false) {
 	int n = (int) p.size(), k = 0;
 	if (n == 1)
@@ -614,6 +622,7 @@ vector<PT> convexHull(vector<PT> &p, bool sorted = false) {
 
 \subsection{Ploblema dos pares mais proximos}
 \begin{lstlisting}
+// a673cd
 pii closestPair(vector<PT> &p) {
 	auto sqDist = [](PT pt) { return pt * pt; };
 	long long dist = sqDist(p[0] - p[1]);
@@ -649,6 +658,8 @@ pii closestPair(vector<PT> &p) {
 
 \subsection{Ponto 2D}
 \begin{lstlisting}
+// 198381
+
 // template <typename T>
 struct PT {
 	#define T long long
@@ -739,6 +750,7 @@ template<typename T> struct hungarian {
 
 \subsection{Binary Lifting}
 \begin{lstlisting}
+// 1e18d0
 namespace BinaryLifting {
 	const int MAXN = 2e5 + 5;
 	const int LOG = 20;
@@ -797,6 +809,8 @@ namespace BinaryLifting {
 
 \subsection{Dinic - Max Flow}
 \begin{lstlisting}
+// b39b81
+
 // by tfg50
 // found at: https://github.com/tfg50/Competitive-Programming/blob/master/Biblioteca/Graph/MaxFlow.cpp
 template <class T = int>
@@ -887,6 +901,7 @@ private:
 
 \subsection{Heavy-Light Decomposition}
 \begin{lstlisting}
+// 2acdda
 class HLD {
 public:
 	void init(int n) {
@@ -944,6 +959,8 @@ private:
 
 \subsection{Min Cost Max Flow}
 \begin{lstlisting}
+// 6ece39
+
 // by tfg50
 // found at: https://github.com/tfg50/Competitive-Programming/blob/master/Biblioteca/Graph/MCMF.cpp
 template <class T = int>
@@ -1081,6 +1098,8 @@ private:
 
 \subsection{Combinatoria}
 \begin{lstlisting}
+// fe3faa
+
 // remember to change BOUNDS accordingly!!!
 
 using T = Mint<>;
@@ -1113,6 +1132,8 @@ T C(int n) {
 
 \subsection{Division Trick}
 \begin{lstlisting}
+// 5bf9bf
+
 // by tfg
 // found at: https://github.com/tfg50/Competitive-Programming/blob/master/Biblioteca/Math/DivisionTrick.cpp
 // O(sqrt(n))
@@ -1184,6 +1205,7 @@ template<typename T> vector<T> convolution(vector<T> &a, vector<T> &b) {
 
 \subsection{Inteiro Modular}
 \begin{lstlisting}
+// a9a997
 template <class T>
 T fexp(T b, long long e) {
 	T ans = T(1);
@@ -1223,6 +1245,8 @@ struct Mint {
 
 \subsection{Linear Sieve of Eratosthenes}
 \begin{lstlisting}
+// 9af074
+
 // Can be used to calculate Multiplicative Functions, such as phi(n) (Mobius)
 
 int phi[MAXN];
@@ -1256,6 +1280,8 @@ void sieve(int n = MAXN - 1) {
 
 \subsection{Matrix}
 \begin{lstlisting}
+// 5cf9d9
+
 // It's preferable to declare global matrices
 // based on: https://github.com/tfg50/Competitive-Programming/blob/master/Biblioteca/Math/Matrix.cpp
 template <const int n, const int m, class T = Mint<>>
@@ -1289,6 +1315,8 @@ struct Matrix {
 
 \subsection{Miller Rabin e Pollard Rho}
 \begin{lstlisting}
+// 832086
+
 // copied from: https://github.com/tfg50/Competitive-Programming/blob/master/Biblioteca/Math/MillerRho.cpp
 
 //miller_rabin
@@ -1432,6 +1460,8 @@ std::vector<ull> factors(ull n) {
 
 \subsection{Aho Corasick}
 \begin{lstlisting}
+// efdf19
+
 // based on: https://github.com/tfg50/Competitive-Programming/blob/master/Biblioteca/Strings/Aho.cpp
 template <const int ALPHA = 26, class T = string, const int OFFSET = 'a'>
 struct Aho {
@@ -1509,6 +1539,8 @@ struct Aho {
 
 \subsection{Algoritmo Z}
 \begin{lstlisting}
+// d8a24c
+
 // Classic problems using Zfunction:
 // - String Matching Problem
 // - Number of Different Substrings in O(n^2)
@@ -1533,6 +1565,7 @@ struct ZFunc {
 
 \subsection{Hash Polinomial}
 \begin{lstlisting}
+// c78010
 struct Hash {
 	const int p[2] = {337, 521}; // remember to change bases if needed
 	const int m[2] = {(int) 1e9 + 7, (int) 1e9 + 9};
@@ -1576,6 +1609,7 @@ struct Hash {
 
 \subsection{KMP - Knuth Morris Pratt}
 \begin{lstlisting}
+// ce4156
 template <class T>
 vector<int> prefixFunction(const T &v) {
 	vector<int> p((int) v.size(), 0);
@@ -1603,6 +1637,8 @@ void match(const T &txt, const T &pat, const vector<int> &p, F f) {
 
 \subsection{Manacher}
 \begin{lstlisting}
+// b4fb35
+
 // copied from: https://github.com/tfg50/Competitive-Programming/blob/master/Biblioteca/Strings/Manacher.cpp
 // manacher[0][i + 1] is the length of matches of even length palindrome, starting from [i, i + 1]
 // manacher[1][i] is the length of matches of odd length palindrome, starting from [i, i]
@@ -1623,8 +1659,9 @@ std::array<std::vector<int>, 2> manacher(const std::string& s) {
 
 \subsection{Suffix Array}
 \begin{lstlisting}
-// by tfg50
-// found at: https://github.com/tfg50/Competitive-Programming/blob/master/Biblioteca/Strings/SuffixArray.cpp
+// 675a66
+
+// by tfg
 class SuffixArray {
 public:
 	template<class T>
