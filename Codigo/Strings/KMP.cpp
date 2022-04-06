@@ -1,3 +1,5 @@
+// KMP - Knuth Morris Pratt
+//
 template <class T>
 vector<int> prefixFunction(const T &v) {
 	vector<int> p((int) v.size(), 0);

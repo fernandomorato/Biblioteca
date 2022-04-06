@@ -1,3 +1,5 @@
+// Miller Rabin e Pollard Rho
+//
 // copied from: https://github.com/tfg50/Competitive-Programming/blob/master/Biblioteca/Math/MillerRho.cpp
 
 //miller_rabin

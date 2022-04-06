@@ -1,3 +1,5 @@
+// Ponto 2D
+//
 // template <typename T>
 struct PT {
 	#define T long long

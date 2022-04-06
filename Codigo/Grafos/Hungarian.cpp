@@ -1,5 +1,3 @@
-// copied from: https://github.com/brunomaletta/Biblioteca/blob/master/Codigo/Problemas/hungarian.cpp
-
 // Algoritmo Hungaro
 //
 // Resolve o problema de assignment (matriz n x n)
@@ -9,6 +7,8 @@
 //
 // O(n^3)
 // 64c53e
+
+// copied from: https://github.com/brunomaletta/Biblioteca/blob/master/Codigo/Problemas/hungarian.cpp
 
 template<typename T> struct hungarian {
 	int n;

@@ -1,3 +1,7 @@
+// Compressao de Coordenadas
+//
+// Classe para comprimir coordenadas
+
 template <typename T>
 class CoordinateCompression {
 public:

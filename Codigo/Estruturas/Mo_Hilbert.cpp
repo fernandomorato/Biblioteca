@@ -1,3 +1,5 @@
+// Otimizacao para Mo - Hilbert
+//
 // Source: https://codeforces.com/blog/entry/61203?#comment-522213
 namespace MO {
 	constexpr int logn = 20;

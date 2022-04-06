@@ -1,11 +1,11 @@
-// copied from: https://github.com/brunomaletta/Biblioteca/blob/master/Codigo/Matematica/convolution.cpp
-
 // FFT
 //
 // chamar com vector<cplx> para FFT, ou vector<mint> para NTT
 //
 // O(n log(n))
 // 64e51b
+
+// copied from: https://github.com/brunomaletta/Biblioteca/blob/master/Codigo/Matematica/convolution.cpp
 
 template<typename T> void fft(vector<T> &a, bool f, int N, vector<int> &rev){
 	for (int i = 0; i < N; i++)

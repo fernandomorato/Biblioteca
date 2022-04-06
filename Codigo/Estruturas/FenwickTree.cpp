@@ -1,3 +1,6 @@
+// Fenwick Tree
+//
+
 template <typename T>
 class FenwickTree {
 public:

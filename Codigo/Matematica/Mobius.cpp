@@ -1,4 +1,5 @@
 // Linear Sieve of Eratosthenes
+//
 // Can be used to calculate Multiplicative Functions, such as phi(n) (Mobius)
 
 int phi[MAXN];

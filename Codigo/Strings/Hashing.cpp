@@ -1,3 +1,5 @@
+// Hash Polinomial
+//
 struct Hash {
 	const int p[2] = {337, 521}; // remember to change bases if needed
 	const int m[2] = {(int) 1e9 + 7, (int) 1e9 + 9};

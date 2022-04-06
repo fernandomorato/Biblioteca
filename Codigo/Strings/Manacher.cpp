@@ -1,3 +1,5 @@
+// Manacher
+//
 // copied from: https://github.com/tfg50/Competitive-Programming/blob/master/Biblioteca/Strings/Manacher.cpp
 // manacher[0][i + 1] is the length of matches of even length palindrome, starting from [i, i + 1]
 // manacher[1][i] is the length of matches of odd length palindrome, starting from [i, i]

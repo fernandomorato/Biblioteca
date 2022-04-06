@@ -1,4 +1,5 @@
-// Implicit Treap
+// Treap Implicita
+//
 namespace treap {
 	// mt19937 rng((unsigned int) chrono::steady_clock::now().time_since_epoch().count());
 

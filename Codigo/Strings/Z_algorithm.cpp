@@ -1,3 +1,5 @@
+// Algoritmo Z
+//
 // Classic problems using Zfunction:
 // - String Matching Problem
 // - Number of Different Substrings in O(n^2)

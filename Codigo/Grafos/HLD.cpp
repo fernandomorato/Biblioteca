@@ -1,3 +1,5 @@
+// Heavy-Light Decomposition
+//
 class HLD {
 public:
 	void init(int n) {

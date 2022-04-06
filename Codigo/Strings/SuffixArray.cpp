@@ -1,3 +1,5 @@
+// Suffix Array
+//
 // by tfg50
 // found at: https://github.com/tfg50/Competitive-Programming/blob/master/Biblioteca/Strings/SuffixArray.cpp
 class SuffixArray {
