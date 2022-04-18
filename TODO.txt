@@ -1,34 +1,15 @@
-tfg disse pra botar na lib:
-* Primitivas de Geometria (Ponto com produto escalar e vetorial)
-    - Aprender como usar isso pra achar coisa de interseção de reta (prioridade baixa)
-    - Convex Hull Trick (prioridade alta)
+* Segtree iterativa com lazy propagation (reference: https://codeforces.com/blog/entry/18051)
+* Melhorar o PT.cpp
+* Refazer o HLD
+* Refazer o Matrix.cpp (Comparar a performance de std::vector, std::array e vetores)
+* Centroid Decomposition
+* Minkowski sum
+* Convex Hull Trick
 * Color update
 * Fórmula de Faulhaber até soma de cubos
 * BIT 2D (a que vc já sabe os updates antes, é bom só que não é necessário)
 * BCC
-* SCC
 * Aprender o que é convolução
 * NTT
 * Convolução de AND, OR, XOR (FWHT)
 * Código pra iterar por submasks
-* Aprender o básico de função geradora
-* Aprender o básico de álgebra linear para cp (Eliminação Gaussiana)
-* Aprender sobre nimber (Sprague-Grundy theorem)
-* Argumento da troca (Aprender)
-
-Coisas a mais que eu quero:
-
-* Segtree iterativa com lazy propagation (reference: https://codeforces.com/blog/entry/18051)
-* Centroid Decomposition
-* Minkowski sum (aprender)
-* Números de Stirling do primeiro tipo (ler)
-* Números de Stirling do segundo tipo (adicionar no BasicComb.cpp)
-* Números de Bell (ler)
-
-Precisa Revisar:
-
-* Treap
-* Binary Lifting (Precisa mesmo?) 
-* HLD (Refazer)
-* Matrix (Comparar a performance de std::vector, std::array e vetores)
-* Basic Combinatorics (Adicionar outras funções úteis)
