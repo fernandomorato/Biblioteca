@@ -52,11 +52,11 @@ Binary(operator /, Point<A> &lhs, B &factor, makePoint(lhs.x / factor, lhs.y / f
 Binary(operator *, Point<A> &lhs, Point<B> &rhs, lhs.x * rhs.x + lhs.y * rhs.y)
 Binary(operator %, Point<A> &lhs, Point<B> &rhs, lhs.x * rhs.y - lhs.y * rhs.x)
 
-Binary(operator ==, Point<A> &lhs, Point<B> &rhs, lhs.x == rhs.x && lhs.y == rhs.y);
-Binary(operator !=, Point<A> &lhs, Point<B> &rhs, lhs.x != rhs.x || lhs.y != rhs.y);
+Binary(operator ==, Point<A> &lhs, Point<B> &rhs, lhs.x == rhs.x && lhs.y == rhs.y)
+Binary(operator !=, Point<A> &lhs, Point<B> &rhs, lhs.x != rhs.x || lhs.y != rhs.y)
 
-Binary(operator <, Point<A> &lhs, Point<B> &rhs, lhs.x < rhs.x || (lhs.x == rhs.x && lhs.y < rhs.y));
-Binary(operator >, Point<A> &lhs, Point<B> &rhs, lhs.x > rhs.x || (lhs.x == rhs.x && lhs.y > rhs.y));
+Binary(operator <, Point<A> &lhs, Point<B> &rhs, lhs.x < rhs.x || (lhs.x == rhs.x && lhs.y < rhs.y))
+Binary(operator >, Point<A> &lhs, Point<B> &rhs, lhs.x > rhs.x || (lhs.x == rhs.x && lhs.y > rhs.y))
 Binary(operator <=, Point<A> &lhs, Point<B> &rhs, !(lhs > rhs));
 Binary(operator >=, Point<A> &lhs, Point<B> &rhs, !(lhs < rhs));
 
@@ -81,7 +81,7 @@ Unary(abs, Point<A> &point, point * point)
 Unary(norm, Point<A> &point, sqrt(abs(point)))
 Binary(dist, Point<A> &lhs, Point<B> &rhs, abs(lhs - rhs))
 Binary(dist2, Point<A> &lhs, Point<B> &rhs, norm(lhs - rhs))
-Binary(bisector, Point<A> &lhs, Point<B> &rhs, lhs * norm(rhs) + rhs * norm(lhs));
+Binary(bisector, Point<A> &lhs, Point<B> &rhs, lhs * norm(rhs) + rhs * norm(lhs))
 
 #undef Unary
 #undef Binary
