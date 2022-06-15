@@ -1,6 +1,6 @@
 // Ponto 2D
 //
-// 5e4062
+// 40907c
 
 template <class T>
 struct Point {
@@ -36,7 +36,18 @@ struct Point {
 	}
 };
 
+const double eps = 1e-9; // or long double
+
 template <class F> inline Point<F> makePoint(const F &x, const F &y) { return Point<F>(x, y); }
+
+// -1 (a < b), 0 (a == b), 1 (a > b)
+template <class F> inline bool eq(const F &a, const F &b) {
+	if (is_same<F, double>::value || is_same<F, long double>::value) {
+		cout << fabs(a - b) << ' ' << eps << '\n';
+		return fabs(a - b) < eps;
+	}
+	return a == b;
+}
 
 #define Unary(name, arg, expr) template <class A> inline auto name(const arg) -> decltype(expr) { return expr; }
 #define Binary(name, arg1, arg2, expr) template <class A, class B> inline auto name(const arg1, const arg2) -> decltype(expr) { return expr; }
@@ -52,11 +63,11 @@ Binary(operator /, Point<A> &lhs, B &factor, makePoint(lhs.x / factor, lhs.y / f
 Binary(operator *, Point<A> &lhs, Point<B> &rhs, lhs.x * rhs.x + lhs.y * rhs.y)
 Binary(operator %, Point<A> &lhs, Point<B> &rhs, lhs.x * rhs.y - lhs.y * rhs.x)
 
-Binary(operator ==, Point<A> &lhs, Point<B> &rhs, lhs.x == rhs.x && lhs.y == rhs.y)
-Binary(operator !=, Point<A> &lhs, Point<B> &rhs, lhs.x != rhs.x || lhs.y != rhs.y)
+Binary(operator ==, Point<A> &lhs, Point<B> &rhs, eq(lhs.x, rhs.x) && eq(lhs.y, rhs.y));
+Binary(operator !=, Point<A> &lhs, Point<B> &rhs, !eq(lhs.x, rhs.x) || !eq(lhs.x, rhs.x));
 
-Binary(operator <, Point<A> &lhs, Point<B> &rhs, lhs.x < rhs.x || (lhs.x == rhs.x && lhs.y < rhs.y))
-Binary(operator >, Point<A> &lhs, Point<B> &rhs, lhs.x > rhs.x || (lhs.x == rhs.x && lhs.y > rhs.y))
+Binary(operator <, Point<A> &lhs, Point<B> &rhs, lhs.x < rhs.x || (eq(lhs.x, rhs.x) && lhs.y < rhs.y));
+Binary(operator >, Point<A> &lhs, Point<B> &rhs, lhs.x > rhs.x || (eq(lhs.x, rhs.x) && lhs.y > rhs.y));
 Binary(operator <=, Point<A> &lhs, Point<B> &rhs, !(lhs > rhs));
 Binary(operator >=, Point<A> &lhs, Point<B> &rhs, !(lhs < rhs));
 
@@ -81,7 +92,7 @@ Unary(abs, Point<A> &point, point * point)
 Unary(norm, Point<A> &point, sqrt(abs(point)))
 Binary(dist, Point<A> &lhs, Point<B> &rhs, abs(lhs - rhs))
 Binary(dist2, Point<A> &lhs, Point<B> &rhs, norm(lhs - rhs))
-Binary(bisector, Point<A> &lhs, Point<B> &rhs, lhs * norm(rhs) + rhs * norm(lhs))
+Binary(bisector, Point<A> &lhs, Point<B> &rhs, lhs * norm(rhs) + rhs * norm(lhs));
 
 #undef Unary
 #undef Binary
