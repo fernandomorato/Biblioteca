@@ -1,6 +1,6 @@
 // Ploblema dos pares mais proximos
 //
-// a673cd
+// 35063e
 pair<int, int> closestPair(vector<Point<long long>> &p) {
 	auto sqDist = [](Point<long long> pt) { return pt * pt; };
 	long long dist = sqDist(p[0] - p[1]);
