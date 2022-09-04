@@ -19,7 +19,7 @@ Biblioteca de algoritmos e estruturas de dados para a maratona de programação.
 
 - Problemas
     - [Closest Pair Problem](https://github.com/fernandomorato/Biblioteca/blob/main/Codigo/Geometria/ClosestPair.cpp)
-- [Ponto 2D](https://github.com/fernandomorato/Biblioteca/blob/main/Codigo/Geometria/Point.cpp)
+- [2D Point](https://github.com/fernandomorato/Biblioteca/blob/main/Codigo/Geometria/Point.cpp)
 
 ### Strings
 ### Extra
