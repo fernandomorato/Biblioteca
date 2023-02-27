@@ -1,5 +1,4 @@
 * Segtree iterativa com lazy propagation (reference: https://codeforces.com/blog/entry/18051)
-* Melhorar o PT.cpp
 * Refazer o HLD
 * Refazer o Matrix.cpp (Comparar a performance de std::vector, std::array e vetores)
 * Centroid Decomposition
@@ -7,9 +6,10 @@
 * Convex Hull Trick
 * Color update
 * Fórmula de Faulhaber até soma de cubos
-* BIT 2D (a que vc já sabe os updates antes, é bom só que não é necessário)
+* BIT 2D (a que vc já sabe os updates antes)
 * BCC
-* Aprender o que é convolução
 * NTT
 * Convolução de AND, OR, XOR (FWHT)
 * Código pra iterar por submasks
+* Fazer uma seção "Usage" para explicar como utilizar cada algoritmo/estrutura
+* Padronizar o estilo de código dos algoritmos copiados
