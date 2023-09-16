@@ -6,16 +6,20 @@
 
 using T = Mint<>;
 
-T fat[MAXN], inv[MAXN];
+T fat[MAXN], ifat[MAXN];
+
+long long inv(long long a, long long b) {
+	return a > 1 ? b - inv(b % a, a) * b / a : 1;
+}
 
 void setup() {
-	fat[0] = inv[0] = 1;
+	fat[0] = ifat[0] = 1;
 	for (int i = 1; i < MAXN; i++) {
 		fat[i] = fat[i - 1] * i;
 	}
-	inv[MAXN - 1] = fexp(fat[MAXN - 1], MOD - 2);
+	ifat[MAXN - 1] = inv(fat[MAXN - 1], MOD);
 	for (int i = MAXN - 2; i >= 1; i--) {
-		inv[i] = inv[i + 1] * (i + 1);
+		ifat[i] = ifat[i + 1] * (i + 1);
 	}
 }
 
@@ -23,7 +27,7 @@ void setup() {
 T C(int n, int k) {
 	if (n < k || k < 0)
 		return T(0);
-	return fat[n] * inv[k] * inv[n - k];
+	return fat[n] * ifat[k] * ifat[n - k];
 }
 
 // C(n) = n-th Catalan number - number of valid parenthesis sequences of size 2 * n
